@@ -1,9 +1,14 @@
-:root {
-	--primarycolor: #fff;
-	--secondarycolor:#3366ff;
-	--fontcolor: #333;
-	--btncolor: #6699ff;
+@import url('content.css');
+@import url('modal.css');
 
+
+:root {
+	--primaryColor: #fff;
+	--secondaryColor:#3366ff;
+	--fontColor: #333;
+	--btnColor: #6699ff;
+	--buttonSlideColor: #0000ff;
+	--lightgray: #b1b1b1;
 }
 
 * {
@@ -15,7 +20,7 @@
 
 .nav-container {
 	width: 100%;
-	background-color: var(--primarycolor);
+	background-color: var(--primaryColor);
 
 }
 
@@ -30,7 +35,7 @@
 }
 
 #navbar-logo {
-	color: var(--fontcolor);
+	color: var(--fontColor);
 	justify-self: start;
 	margin-left: 20px;
 	cursor: pointer;
@@ -51,31 +56,31 @@
 }
 
 .nav-links:hover {
-	color: var(--secondarycolor);
+	color: var(--secondaryColor);
 	transition: all 0.2s ease-out;
 }
 
 .nav-links-btn {
-	background-color: var(--btncolor);
+	background-color: var(--btnColor);
 	padding: 5px 15px;
 	border-radius: 8px
 }
 
 .nav-links-btn:hover {
 	background-color: transparent;
-	color: var(--primarycolor)
+	color: var(--primaryColor)
 	padding: 5px 15px;
 	border-radius: 8px;
-	border: 1px solid var(--btncolor);
+	border: 1px solid var(--btnColor);
 	transition: all 0.3s ease-out;
 }
 
 .menu-toggle .bar {
 	width: 25px;
-	height: 5px;
+	height: 3px;
 	margin: 5px auto;
 	transition: all 0.3s ease-in-out;
-	background: var(--fontcolor);
+	background: var(--fontColor);
 }
 
 @media screen and (max-width: 768px) {
@@ -85,7 +90,7 @@
 	.nav-menu {
 		display: grid;
 		grid-template-columns: auto;
-		background: var(--secondarycolor);
+		background: var(--secondaryColor);
 		margin: 0;
 		width: 100%;
 		position: absolute;
@@ -98,7 +103,7 @@
 		margin-left: 20px;
 	}
 	.nav-menu.active {
-		background: var(--primarycolor);
+		background: var(--primaryColor);
 		left: 0;
 		opacity: 1;
 		transition: all 0.5s ease;
@@ -110,8 +115,8 @@
 		display: table;
 	}
 	.nav-links:hover {
-		background-color: var(--secondarycolor);
-		color: var(--primarycolor);
+		background-color: var(--secondaryColor);
+		color: var(--primaryColor);
 		transition: all 0.4s ease-out;
 	}
 	.navbar {
@@ -121,17 +126,17 @@
 		border: none;
 		padding: 0;
 		border-radius: 0;
-		background-color: var(--primarycolor);
-		color: var(--fontcolor);
+		background-color: var(--primaryColor);
+		color: var(--fontColor);
 		transition: all 0.4s ease-out;	
 	}
 	.nav-links-btn:hover {
 /*		border: none;
 		padding: 0;
 		border-radius: 0;
-		color: var(--fontcolor);
+		color: var(--fontColor);
 		transition: all 0.4s ease-out;*/
-		background-color: var(--secondarycolor);
+		background-color: var(--secondaryColor);
 
 	}
 	#mobile-menu {
@@ -151,9 +156,9 @@
 		opacity: 0;
 	}
 	#mobile-menu.is-active .bar:nth-child(1) {
-		transform: translateY(10px) rotate(45deg);
+		transform: translateY(8px) rotate(45deg);
 	}
 	#mobile-menu.is-active .bar:nth-child(3) {
-		transform: translateY(-10px) rotate(-45deg);
+		transform: translateY(-8px) rotate(-45deg);
 	}
 }
